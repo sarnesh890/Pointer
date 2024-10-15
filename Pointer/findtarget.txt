@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+bool findtarget(char *arr,int n,char target)
+{
+    for(int i=0;i<n;i++)
+    {
+        if(*(arr+i)==target)
+        {
+            return true;
+        }
+    }
+    return false;
+    
+}
+
+
+
+int main()
+{
+    char arr[]="hello";
+    int n=strlen(arr);
+    char target='i';
+    if(findtarget(arr,n,target)){
+        cout<<"Found";
+    }
+    else
+    {
+        cout<<"Not Found";
+    }
+}

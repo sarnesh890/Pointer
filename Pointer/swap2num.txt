@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void swap2num(int *a,int * b)
+{
+    int temp=*a;
+    *a=*b;
+    *b=temp;
+    cout<<"After swaping two number\n";
+    cout<<"a="<<*a<<" b="<<*b;
+}
+
+
+
+int main()
+{
+    int a=10;
+    int b=20;
+    cout<<"Original values\n a="<<a<<" and b="<<b<<endl;
+    swap2num(&a,&b);
+}

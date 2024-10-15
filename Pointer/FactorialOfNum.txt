@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void factorialOfNum(int n)
+{
+    int *ptr=new int;//dynamically allocate the memory for pointer
+    *ptr=1;
+    for(int i=1;i<=n;i++)
+    {
+        *ptr*=i;
+    }
+    cout<<*ptr;
+    delete ptr;//free the allocated memory
+}
+
+
+
+int main()
+{
+    int n=5;
+    factorialOfNum(n);
+}

@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void countVowels(char *arr,int n)
+{
+    int s=0;
+    while (*arr) {
+        // Check if the current character is a vowel (both lowercase and uppercase)
+        if (*arr == 'a' || *arr == 'e' || *arr == 'i' || *arr == 'o' || *arr == 'u' ||
+            *arr == 'A' || *arr == 'E' || *arr == 'I' || *arr == 'O' || *arr == 'U') {
+            s++;
+        }
+        arr++; // Move to the next character
+    }
+    cout<<s;
+}
+
+
+
+int main()
+{
+    char arr[]="hello";
+    int n=strlen(arr);
+    countVowels(arr,n);
+}
