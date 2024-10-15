@@ -1,0 +1,21 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void replaceVowelsWithAmpersand(string *str) {
+    char *ptr = &(*str)[0];
+    while (*ptr) { // Loop until the end of the string
+        char lowerCh = tolower(*ptr); // Convert to lowercase for comparison
+        if (lowerCh == 'a' || lowerCh == 'e' || lowerCh == 'i' || lowerCh == 'o' || lowerCh == 'u') {
+            *ptr = '&'; // Replace vowel with '&'
+        }
+        ptr++; // Move to the next character
+    }
+}
+
+int main() {
+    string str = "Hello World!";
+    replaceVowelsWithAmpersand(&str);
+    cout << str << std::endl; // Output the modified string
+    return 0;
+}
